@@ -13,7 +13,12 @@
       <input type="text" name="user" /><br />
       <label for="messsage">Message:</label><br />
       <input for="text" name="message" /><br />
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" onclick="home(event)" />
     </form>
+    <script>
+      const home = (e) => {
+        alert("Message Added Successfully!");
+      };
+    </script>
   </body>
 </html>

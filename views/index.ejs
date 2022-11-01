@@ -5,43 +5,44 @@
   <title>
     <%= title %>
   </title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/index.css' />
 </head>
 
 <body>
-  <button onclick="addMsg(event)">Add New Message</button>
 
   <h1>
     <%= title %>
       <div class="container">
   </h1>
 
-  <h4 class="welcome"> Welcome to <%= title %>
-
-  </h4>
-
   <% for(var i=0 ; i<messages.length ;i++){ %>
     <div class="messageBox">
       <div class="userBox">
-        <%= messages[i].user %>
+        <b>
+          <%= messages[i].user %>
+        </b>
       </div>
       <div class="userDate">
+
         <%= messages[i].added %>
 
       </div>
       <div class="userMessage">
-        <%= messages[i].text %>
+        <b>
+          <%= messages[i].text %> <%= messages[i].user %>
+        </b>
 
       </div>
     </div>
     <% } %>
       </div>
 
-    <script>
-      const addMsg = e => {
-        window.location.href = '/new';
-      }
-    </script>
+      <script>
+        const addMsg = e => {
+          window.location.href = '/new';
+        }
+      </script>
+      <button onclick="addMsg(event)">Add New Message</button>
 </body>
 
 </html>

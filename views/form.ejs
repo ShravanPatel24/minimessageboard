@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-  </head>
-  <body>
-    <h1>Add <%= title %></h1>
-    <form method="post" action="/new">
-      <label for="user">User:</label><br />
-      <input type="text" name="user" /><br />
-      <label for="messsage">Message:</label><br />
-      <input for="text" name="message" /><br />
-      <input type="submit" value="Submit" onclick="home(event)" />
-    </form>
-    <script>
-      const home = (e) => {
-        alert("Message Added Successfully!");
-      };
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/home.css' />
+</head>
+
+<body>
+  <h1>Add <%= title %>
+  </h1>
+  <form method="post" action="/new">
+    <label for="user">User:</label><br />
+    <input type="text" name="user" /><br />
+    <label for="messsage">Message:</label><br />
+    <input for="text" name="message" /><br />
+    <button type="submit" value="Submit" onclick="home(event)">Submit</button>
+  </form>
+  <script>
+    const home = (event) => {
+      alert("Message Added Successfully!");
+    };
+  </script>
+</body>
+
 </html>
